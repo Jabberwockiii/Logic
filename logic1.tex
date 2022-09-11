@@ -1,0 +1,66 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{stmaryrd}
+
+\title{Problem Set 1 - second try Advanced Logic, Fall 2020 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+As I explained, I am making this available to allow for the possibility of a "do-over" if you are not satisfied with the answers you turned in for Problem Set 1 on Friday.
+
+If you wish, you may turn solutions any of the following problems at any time before class on Tuesday September 13th. If you turn in a solution, it will replace whatever you may have turned in the first time around for the correspondingly numbered problem.
+
+If you're turning in answers for this problem set, please help us keep track, by listing any cases where you want us to \textit{keep} what you turned in first time around, and if possible, copy and paste the answer you want us to keep into the document containing your answers to these new problems.
+
+\begin{enumerate}
+  \item (50\%) Prove that for any sets $A$ and B, $A \subseteq B$ if and only if $A \backslash B=\varnothing$.
+    \begin{enumerate}
+      \item Assume that $A \subseteq B$ and show that $A \backslash B=\varnothing$.
+      \begin{enumerate}
+        \item Since $A \subseteq B$, for any element $a$ in A, $a \in A$, $a \in B$.
+        \item By the definition of $\backslash$, $a \in A \backslash B$ if and only if $a \in A$ and $a \notin B$.
+        \item Therefore, if $a \in A \backslash B$, then $a \in A$ and $a \notin B$. 
+        \item Combining (i) and (iii), we reach that $a \in B$ and $a \notin B$, thus $ a \neq a$.(contradiction)
+        \item By the definition of $\varnothing$, $\varnothing:=\{x \mid x \neq x\}$
+        \item and substitue x for $a$ by(iv), $a \neq a$, therefore, we satisfied the definition of empty set
+        \item for every element in $A \backslash B$, $a \in A \backslash B$, $a \in A$, $a \notin B$, $a \neq a$ , $a \in \varnothing $ 
+        therefore, $A \backslash B \subseteq \varnothing$
+        \item By definition of $\varnothing$, $\varnothing$ is the subset of anyset, Thus, $\varnothing \subseteq A \backslash B$
+        \item Therefore, $A \backslash B = \varnothing$
+      \end{enumerate}
+      \item Assume that $A \backslash B=\varnothing$ and show that $A \subseteq B$.
+      \begin{enumerate}
+        \item Since $A \backslash B=\varnothing$, for any element $a$ in $A \backslash B$, $a \in A \backslash B$, $a \in A$, $a \notin B$, $a \neq a$ , $a \in \varnothing $
+        \item 
+      \end{enumerate}
+    \end{enumerate}
+  \item (30\%) Prove that whenever $R$ is a relation from $A$ to $B$ and $S$ is a relation from $B$ to $C$,
+\end{enumerate}
+(a) If $R$ and $\mathrm{S}$ are both surjective, then $S \circ R$ is surjective.
+
+(b) If $R$ and $S$ are both injective, then $S \circ R$ is injective.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (10\%) Let $\mathrm{A}=\{a, b\}$ be a 2-membered set $\mathrm{B}=\{c, d, e\}$ be a three-membered set. List all the functions from A to B (there are $9=3^{2}$ ) and all the functions from $B$ to $A$ (there are 8 $=2^{3}$ ). For each of these 17 functions, specify whether it is injective and whether it is surjective.
+
+  \item (10\%) Prove that where $R$ is a relation from $A$ to $B$ and $S$ and $T$ are relations from $B$ to $C,(S \cup T) \circ R=(S \circ R) \cup(T \circ R) \cdot$
+
+  \item (10\%) Show that where $R$ is a relation from $A$ to $B$,
+
+\end{enumerate}
+(a) $R$ is surjective iff id $\mathrm{B} \subseteq R_{\circ} R^{-1}$
+
+(b) $R$ is functional iff $R_{\circ} R^{-1} \subseteq \mathrm{id}_{\mathrm{B}}$
+
+
+\end{document}
