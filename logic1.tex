@@ -39,16 +39,30 @@ If you're turning in answers for this problem set, please help us keep track, by
       \end{enumerate}
       \item Assume that $A \backslash B=\varnothing$ and show that $A \subseteq B$.
       \begin{enumerate}
-        \item Since $A \backslash B=\varnothing$, for any element $a$ in $A \backslash B$, $a \in A \backslash B$, $a \in A$, $a \notin B$, $a \neq a$ , $a \in \varnothing $
-        \item 
+        \item To prove that A is a subset of B, we need to show that for any element $a$ in A, $a \in B$.
+        \item With the assumption that $A \backslash B=\varnothing$, for any element $a$ in $A \backslash B$, $ a \in A$, $a \notin B$ and $a \in \varnothing$
+        \item Since $a$ represents any element in A, $a \in A$ and $a \in \varnothing$, $A \subseteq \varnothing$
+        \item Since $\varnothing$ is the subset of any set, $\varnothing \subseteq A$
+        \item Combining (iii) and (iv), we reach that $A = \varnothing$
+        \item Thus, $A \subseteq B$
       \end{enumerate}
     \end{enumerate}
   \item (30\%) Prove that whenever $R$ is a relation from $A$ to $B$ and $S$ is a relation from $B$ to $C$,
-\end{enumerate}
-(a) If $R$ and $\mathrm{S}$ are both surjective, then $S \circ R$ is surjective.
-
-(b) If $R$ and $S$ are both injective, then $S \circ R$ is injective.
-
+  \begin{enumerate}
+    \item If $R$ and $\mathrm{S}$ are both surjective, then $S \circ R$ is surjective.
+      \begin{enumerate}
+        \item By the definition of surjective, for every element in set C there is some element in set B such that $\langle b, c\rangle \in S$.
+        \item And for every element in set B there is some element in set A such that $\langle a, b\rangle \in R$.
+        \item Therefore, for every element in set C there is some element in set A such that $\langle a, c\rangle \in S \circ R$.
+        \item By the definition of surjective, for every element in set A there is some element in set C such that $\langle a, c\rangle \in S \circ R$.
+        \item So, $S \circ R$ is surjective.
+      \end{enumerate}
+    \item $R$ and $S$ are both injective, then $S \circ R$ is injective.
+      \begin{enumerate}
+        \item By the definition of injective, for any two elements $\langle a, b\rangle$ and $\langle a', b'\rangle$ in set A, if $\langle a, b\rangle \in R$ and $\langle a', b'\rangle \in R$, then $a=a'$.
+      \end{enumerate}
+  \end{enumerate}
+  \end{enumerate}
 \begin{enumerate}
   \setcounter{enumi}{3}
   \item (10\%) Let $\mathrm{A}=\{a, b\}$ be a 2-membered set $\mathrm{B}=\{c, d, e\}$ be a three-membered set. List all the functions from A to B (there are $9=3^{2}$ ) and all the functions from $B$ to $A$ (there are 8 $=2^{3}$ ). For each of these 17 functions, specify whether it is injective and whether it is surjective.
