@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1663025606 "/home/xuzhi/Logic/logic1.tex" "logic1.pdf" "logic1" 1663025606
+["pdflatex"] 1663035746 "/home/xuzhi/Logic/logic1.tex" "logic1.pdf" "logic1" 1663035747
   "/etc/texmf/web2c/texmf.cnf" 1662688985 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk" 1662691955 23784 6c49e08ec4b80cb3eccaffd5bbbabc1b ""
   "/home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk" 1662691955 42496 71955e762249db29f8d223d33a793de8 ""
   "/home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk" 1662923072 31872 ebdc85e7c83a2e54a014c943703f95ac ""
-  "/home/xuzhi/Logic/logic1.tex" 1663025606 7347 936517c3b698ee50c540cc2f6db7205e ""
+  "/home/xuzhi/Logic/logic1.tex" 1663035743 8369 dfed8183e3f8b43766bf99d3c344ab6f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1728.tfm" 1136768653 3584 3c76ccb63eda935a68ba65ba9da29f1a ""
@@ -71,8 +71,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1662691940 162899 515de6df2324cca4eba6407bef60e07c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1662691942 1435926 e96f9448a409d017f72d741d75c53c6b ""
-  "logic1.aux" 1663025606 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
-  "logic1.tex" 1663025606 7347 936517c3b698ee50c540cc2f6db7205e ""
+  "logic1.aux" 1663035746 32 ab05033ccbb38b00a31b200ccedf8001 "pdflatex"
+  "logic1.tex" 1663035743 8369 dfed8183e3f8b43766bf99d3c344ab6f ""
   (generated)
   "logic1.aux"
   "logic1.log"
