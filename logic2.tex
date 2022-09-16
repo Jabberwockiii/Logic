@@ -33,7 +33,7 @@
     The first assumptions assumes that there is a set Y that
     is the element of power set of the set B, this
     $\mathscr{P} B$ is consistent with the above 
-    definition. The second assumption states that function f takes in a set called Y and spits out another set that is $\{x \in A \mid f x \in Y\}$ this structure itself is a biconditional structure, it states that assumes that there is a set if condition x is an element of A, then function f can take this element and the result it spits out is an element of set Y. On the other direction, if there exists(we assumes) an element that can be take in by the function f and the result is an element of set Y, then this element also belongs to the set A.
+    definition. The second assumption states that function $f^{*}$ takes in a set called Y and spits out another set that is $\{x \in A \mid fx \in Y\}$ this structure itself is a biconditional structure, it states that(left) assumes that there is an element of set A, then function f can take this element and the result it spits out is an element of set Y. It (right) assumes that there is an result of taking x to function f and the result belongs to Y and x is an element of A. On the other direction of the equation, if there exists(we assumes) an element that can be take in by the function $f^{*}$ and the result is an element of set Y, then this element also belongs to the set A.
 
 
     \item Above are my understanding of the question and assumptions, and now I will start my proof. None of the above are my assumptions, thoses are assumptions coming from the question itself.
@@ -48,19 +48,60 @@
     \item Similary, that is same from the other direction of the equation sign. As we consider biconditional structure of the set builder which is the result of synthesizing (a) and (b) and (d) and either left($\{x \in A$\}) or right($\{f x \in Y\}$ ) of the set builder. To be clear, in case of (d), we treat fx as a element of set Y and element of power set of B. Thus, x also end its journey at power set of A. Thus, we proved the equation sign from the left side and the right side.
     \item 
   \end{enumerate}
-\end{enumerate}
-(a) (50\%) Show that $f$ is injective iff $f^{*}$ is surjective.
-
-(b) (30\%) Show that $f$ is surjective iff $f^{*}$ is injective.
-
+  \item (50\%) Show that $f$ is injective iff $f^{*}$ is surjective.
+  \begin{enumerate}
+    \item Since iff is a biconditional symbol, we consider two cases one from the left and the other from the right. 
+    \item left to right: assume that f is injective, then we can conclude that for any arbitary element $x_{1}$ and $x_{2}$ in set A, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$.
+    \item By the definition, $f^{*}$ is surjective means that we assume a function that for every y in set B there is some x in set A such that Rxy.
+    \item therefore, injective property assumes that every y has only one x. This case of one x can be substitute by some x. Thus. $f^{*}$ is surjective.
+    \item From the other direction, we assume that $f^{*}$ is surjective, therefore for every y in set B, there is some x in set A such that Rxy. By the definition of injective, 
+    $f$ is injective means that for any arbitary element $x_{1}$ and $x_{2}$ in set A, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. Moreover, since it is a function so it is both serial and functional. serial property ensures that there is only exact one x for every y. Thus, $f$ is injective.
+  \end{enumerate}
+  \item (30\%) Show that $f$ is surjective iff $f^{*}$ is injective. 
+  \begin{enumerate}
+    \item Same Framework
+    \item left side: assume that $f$ is surjective, then we can conclude that for every element $y$ in set B, there is some $x$ in set A such that $f(x)=y$. Injective property states that there is one exact x that has relation with y. The definition of injective property needs two condition and one result. if Rxy and Rx'y, x = x'. The functional property assumes the single property(exact one) of y. and for every y we have some x, and for every x there is some y(Rxy). Since every y has some x and y can only be in a form of exact one. Thus, x can only be in a form of exact one x. Thus, Rxy, Rx'y, x = x'. Thus, it is injective. 
+    \item right side: assumes that $f^{*}$ has serial, functional, and injective property by the given information of the question. To prove it is surjective, we need to show for every y, there is some x. Now, we start the proof. Serial property proves that for every x there is some y. Serial property states that every x there is some y. Functional property states that it is the exact y. Injective property requires that we have some x from every y. Therefore, by combing all 3 property, for every y(we get some y, at least, by serial property, we have B is at least as big as A), By the uniqueness of x and y(functional and injective), for every y, there is some x. Thus, it is proved.
+  \end{enumerate}
+  \item 
 \begin{enumerate}
   \setcounter{enumi}{2}
   \item (10\%) Using the Axiom of Separation to show that there is no set that contains all sets. (Hint: adapt the reasoning in Russell's Paradox.)
+  \begin{enumerate}
+    \item 
+  \end{enumerate}
 
   \item (10\%) Show that for any set $A$, there is no injective function from $\mathscr{P} A$ to $A$.
+  \begin{enumerate}
+    \item The injective property of a function requires an exact x from B to A. The relation $\mathscr{P} A$ and $A$ is that $A$ is a subset(include itself) of $\mathscr{P} A$. Assumes that A is a set that contains all the set in the universe including it self. Then, apply a similar reasoning of Russell paradox, we can conclude that this injective property is not satisfied because it reference to it self therefore it is not the exact x. By giving an counterexample, I showed there is no injective function from $\mathscr{P} A$ to $A$
+  \end{enumerate}
 
   \item (10\%) Suppose that $f: A \rightarrow B$ and $g: B \rightarrow A$ are functions such that for any $x \in A, x=g(f x)$, and for any $y \in B, y=f(g y)$. Show that $g=f-1$.
+  \begin{enumerate}
+    \item $f: A \rightarrow B$
+    \item $g: B \rightarrow A$
+    \item above are causation, and the below is the effect.
+    \item $x \in A, x=g(f x)$
+    \item any $y \in B, y=f(g y)$
+    \item above is the causation, and the below is the final effect we need to prove.
+    \item $g=f-1$
+    \item The causation chain of the question has three levels, the second level has two parts. All the above are assumptions given by the question, and now I will start my proof. 
+    \item first level:
+    \item Since $f: A \rightarrow B$ and $g: B \rightarrow A$, we can assume that there is an element $a$ that is in set A, and another element $b$ in set B, and it has an relation Rab that is bijection by definition of bijection.
+    \item By (iv) and (v), we have that fx is in set B, g(fx) is in set A. so it is jumping back and forth. On the other side, gy is in set A, and f(gy) is in set B. Thus, it is also jumping back and forth. Together, they have a bijection relation. The assumption of the question is consistent with my assumptions(I know we are safe, yeah!).
+    \item To show g = f - 1, we need to show that g is a subset of f - 1 and f - 1 is a subet of g. 
+    \item From left to right: Since we have a bijection relation. By the definition of equinumerious, $A \sim B$. Then B is at least as big as A and A is at least as big as B.($A \lesssim B$ and $B \lesssim A$), thus. (suspisious)Assume that A is DK-infinite, then B is also DK-infinite, (equinumerious), By Cardinal Comparability Theorem, which we have have not proved yet because it need (AOC), $$
+    \text { For any sets } A \text { and } B \text {, either } A \lesssim B \text { or } B \lesssim A \text {. }
+    $$
+    I give the above sentence a whole sentence space because it deserves it. 
+    \item This correponds with my suspisious assumption that A is DK-infite by using the law of excluded the middle. 
+    Since B is at least as big as A, A is equinumerious with some subset of B, and there is an injective function from A to B. Thus, f-1 is a subset of g. 
+    \item We proved one direction of the equation sign, the other side is the same structure by Cardinal Comparability Theorem and Axiom of Choice. 
+    \item However, the above reasoning and proof is flawed. Because we have not proved the Axiom of Choice yet. 
+    
+
+  \end{enumerate}
 
 \end{enumerate}
-
+\end{enumerate}
 \end{document}
