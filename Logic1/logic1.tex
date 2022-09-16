@@ -109,12 +109,50 @@ If you're turning in answers for this problem set, please help us keep track, by
   \begin{enumerate}
     \item To prove that $(S \cup T) \circ R=(S \circ R) \cup(T \circ R)$, we need to prove that 
     \item Left Side: $(S \cup T) \circ R$ is a subset of $(S \circ R) \cup(T \circ R)$
+      \begin{enumerate}
+        \item Since binary relations can be defined as a set of ordered pairs which is a subset of Cartesian Product.
+        \item It is a special case of set, thus, we can use set operations on it.
+        \item $S$ and $T$ are some relations from $B$ to $C$. Therefore, the Union of $S$ and $T$ is also a relation from $B$ to $C$, we can call it K.
+        \item $K \circ R $ means that the composition of R and K is the relation that $\{\langle x, z\rangle \in A \times C \mid$ there exists $y \in B$ such that $\langle x, y\rangle \in R$ and $\langle y, z\rangle \in K\}$, from $A$ to $C$
+        \item So, every ordered pair $\langle x, z\rangle$ in $K \circ R$ is a subset of $(S \cup T) \circ R$
+        \item Next, I am gonna prove that every ordered pair $\langle x, z\rangle \subseteq (S \cup T) \circ R$ is a subset of $(S \circ R) \cup(T \circ R)$
+        \item By the definition of composition, $S \circ R$ is the composition of R and S, which is the relation that $\{\langle x, z\rangle \in A \times C \mid$ there exists $y \in B$ such that $\langle x, y\rangle \in R$ and $\langle y, z\rangle \in S\}$, from $A$ to $C$
+        \item Thus, every ordered pair $\langle x, z\rangle \subseteq S \circ R$
+        \item Similarly, $\langle x, z\rangle \subseteq T \circ R$
+        \item Thus, (vi) is proved. 
+        \item Combining (vi) and (v), we can conclude that $(S \cup T) \circ R$ is a subset of $(S \circ R) \cup(T \circ R)$
+      \end{enumerate}
+    \item Right Side: $(S \circ R) \cup(T \circ R)$ is a subset of $(S \cup T) \circ R$ 
+    \begin{enumerate}
+      \item Using the same method as the left side, but assuming that $(S \circ R) \cup(T \circ R)$, the ordered pair $\langle x, z\rangle$ is a subset of $(S \cup T) \circ R$
+    \end{enumerate}
   \end{enumerate}
-
+  
   \item (10\%) Show that where $R$ is a relation from $A$ to $B$,
   \begin{enumerate}
     \item $R$ is surjective iff id $\mathrm{B} \subseteq R_{\circ} R^{-1}$
-
+    \begin{enumerate}
+      \item From left to right
+      \begin{enumerate}
+        \item Assume that R is a relation from A to B, it is surjective iff for every $b \in B$, there exists some $a \in A$ such that $\langle a, b\rangle \in R$
+        \item By the definition of converse, $R^{-1}$ is the relation that $\{\langle b, a\rangle \mid \langle a, b\rangle \in R\}$, from $B$ to $A$
+        \item Since $R$ is surjective, for every $b \in B$, there exists some $a \in A$ such that $\langle a, b\rangle \in R$
+        \item According to the assumption of set B exists, and the definition of $\operatorname{id}_{B}$, for any set, $\langle b, b\rangle \in \operatorname{id}_{B}$
+        \item Thus, besides, R is surjective from A to B, R is also surjective from R to R.
+        \item Since the composition of a relation and its converse is the identity relation, $R_{\circ} R^{-1}$ is the identity relation, which is the same as $\operatorname{id}_{B}$
+        \item Thus, $\operatorname{id}_{B} \subseteq R_{\circ} R^{-1}$
+      \end{enumerate}
+    \item From right to left
+      \begin{enumerate}
+        \item From right to left
+        \item It is assumed that B exists, therefore $\operatorname{id}_{B}$ also exists.
+        \item It is also assumed that R exists, thus, $R_{\circ} R^{-1}$ is just R itself by definition of composition
+        \item According to the PowerPoint(a few noteworthy fact), the composition of $\operatorname{id}_{B}$ and R is just R itself. 
+        \item thus, $\operatorname{id}_{B} \subseteq R$
+        \item thus, for every $b \in B$, there exists some $a \in A$ such that $\langle a, b\rangle \in R$ as R is defined by a relation from A to B
+        \item As a result, R is surjective.
+      \end{enumerate}
+    \end{enumerate}
     \item $R$ is functional iff $R_{\circ} R^{-1} \subseteq \mathrm{id}_{\mathrm{B}}$
   \end{enumerate}
 \end{enumerate}
