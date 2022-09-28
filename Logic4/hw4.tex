@@ -36,9 +36,17 @@ Note that you can and should rely on earlier results in proving later ones.
     \begin{enumerate}
         \item $s \oplus t = s$
         \item iff $(s:[]) \oplus t = s$, since $[s] = (s:[])$ 
-        \item iff 
+        \item iff $s:([]\oplus t) = s$, by clause 2
+        \item iff $s : t = s$, by clause 1
+        \item iff $t = []$
+        \item therefore, we reach our conclusion here.
     \end{enumerate}
   \item (15\%) Prove that if $s \oplus t=[]$ then $s=t=[]$.
+    \begin{enumerate}
+        \item by the injective property of Axiom of the List, we have that [] is not in the range of any $cons_{a}$
+        \item $if s \oplus t = []$, then $s = []$
+        \item $if s \oplus t = []$, then $s = []$
+    \end{enumerate}
 
   \item $(15 \%)$ Prove that if $s \oplus t=(a: u)$ then either $s=[]$ or $s=\left(a: s^{\prime}\right)$ for some $s^{\prime}$.
 

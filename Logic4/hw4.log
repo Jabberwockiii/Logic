@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.8)  28 SEP 2022 17:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.9.8)  28 SEP 2022 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -351,18 +351,18 @@ Package rerunfilecheck Info: File `hw4.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 10899 strings out of 480171
- 174215 string characters out of 5894490
- 477830 words of memory out of 5000000
+ 10905 strings out of 480171
+ 174257 string characters out of 5894490
+ 478830 words of memory out of 5000000
  28683 multiletter control sequences out of 15000+600000
  480656 words of font info for 65 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 60i,9n,68p,493b,413s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on hw4.pdf (2 pages, 66537 bytes).
+ 60i,9n,68p,493b,415s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on hw4.pdf (2 pages, 76439 bytes).
 PDF statistics:
- 143 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
- 15 named destinations out of 1000 (max. 500000)
+ 156 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
+ 21 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

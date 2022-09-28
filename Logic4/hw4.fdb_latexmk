@@ -1,10 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1664399371 "/home/xuzhi/Logic/Logic4/hw4.tex" "hw4.pdf" "hw4" 1664399372
+["pdflatex"] 1664400703 "/home/xuzhi/Logic/Logic4/hw4.tex" "hw4.pdf" "hw4" 1664400703
   "/etc/texmf/web2c/texmf.cnf" 1662688985 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk" 1662691955 23784 6c49e08ec4b80cb3eccaffd5bbbabc1b ""
   "/home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk" 1662691955 28416 81c1495e46b7d3bed577035ccfb9e463 ""
   "/home/xuzhi/.texlive2021/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1728.600pk" 1662691955 42496 71955e762249db29f8d223d33a793de8 ""
-  "/home/xuzhi/Logic/Logic4/hw4.tex" 1664399371 2608 966a159dbaa7a3f5a12e20b21ec2380e ""
+  "/home/xuzhi/Logic/Logic4/hw4.tex" 1664400702 3024 d8306d6ed8f05d37f3be75e881e5b39f ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0500.tfm" 1136768653 3584 178baad7ffca7f5d3428a83bd7cc64c3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm0700.tfm" 1136768653 3584 cf973739aac7ab6247f9150296af7954 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm" 1136768653 3584 adb004a0c8e7c46ee66cad73671f37b4 ""
@@ -34,6 +34,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary7.tfm" 1302307949 848 26631fcb3e4cb6757598b9cda7967b63 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/stmaryrd/stmary8.tfm" 1302307949 848 6125cdd3627e68d3db8013b98e587508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
@@ -103,9 +104,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1644012257 39432 7155514e09a3d69036fac785183a21c2 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1662691940 162899 515de6df2324cca4eba6407bef60e07c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1662691942 1435926 e96f9448a409d017f72d741d75c53c6b ""
-  "hw4.aux" 1664399372 686 4ce905362b6645b598ea182482e9aeed "pdflatex"
-  "hw4.out" 1664399372 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "hw4.tex" 1664399371 2608 966a159dbaa7a3f5a12e20b21ec2380e ""
+  "hw4.aux" 1664400703 686 4ce905362b6645b598ea182482e9aeed "pdflatex"
+  "hw4.out" 1664400703 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "hw4.tex" 1664400702 3024 d8306d6ed8f05d37f3be75e881e5b39f ""
   (generated)
   "hw4.aux"
   "hw4.log"
