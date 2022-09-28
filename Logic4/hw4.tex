@@ -1,0 +1,71 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+
+\title{Problem Set 4 }
+
+
+\author{Advanced Logic}
+\date{}
+
+
+\begin{document}
+\maketitle
+
+26th September 2022
+
+Throughout this problem set, $A$ is some arbitrary set, and $A^{*}$ is the set of lists over $A ; s, t, u$ are arbitrary members of $A^{*}$. $\oplus$ denotes the list concatenation operation on $A^{*}$, defined to obey the following recursion clauses:
+$$
+\begin{aligned}
+{[] \oplus t } &=t \\
+(a: s) \oplus t &=a:(s \oplus t)
+\end{aligned}
+$$
+Note that you can and should rely on earlier results in proving later ones.
+
+\begin{enumerate}
+  \item $(15 \%)$ Prove that if $s \oplus t=s$ then $t=[]$.
+    \begin{enumerate}
+        \item $s \oplus t = s$
+        \item iff $(s:[]) \oplus t = s$, since $[s] = (s:[])$ 
+        \item iff 
+    \end{enumerate}
+  \item (15\%) Prove that if $s \oplus t=[]$ then $s=t=[]$.
+
+  \item $(15 \%)$ Prove that if $s \oplus t=(a: u)$ then either $s=[]$ or $s=\left(a: s^{\prime}\right)$ for some $s^{\prime}$.
+
+\end{enumerate}
+For the following problems, we define a function final : $A^{*} \rightarrow \mathcal{P}\left(A^{*}\right)$ recursively as follows:
+$$
+\begin{aligned}
+\text { final }[] &=\{[]\} \\
+\operatorname{final}(a: s) &=\text { final } s \cup\{(a: s)\}
+\end{aligned}
+$$
+We say that $s$ is a final sublist of $t$ iff $s \in$ final $t$.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item $(15 \%)$ Prove that [] is a final sublist of every list.
+
+  \item $(10 \%)$ Prove that every list is a final sublist of itself.
+
+  \item $(10 \%)$ Prove that $t$ is a final sublist of $s \oplus t$.
+
+  \item $(10 \%)$ Prove that if $s$ is a final sublist of $t$, then $t=u \oplus s$ for some $u$.
+
+  \item $(10 \%)$ Prove that if $s \oplus s^{\prime}=t \oplus t^{\prime}$ then either $s^{\prime}$ is a final sublist of $t^{\prime}$ or $t^{\prime}$ is a final sublist of $s^{\prime}$.
+
+  \item (10\% extra credit) Play through the level 'Advanced Multiplication World' in the Lean Natural Numbers Game (\href{https://www}{https://www} . ma. imperial . ac . uk/ buzzard/xena/natural\_number\_game/). To show that you've completed the levels, send us a screenshot of the last level of Advanced Multiplication World open on your computer screen, with your name showing somewhere in the screenshot (e.g. in a text editor window).
+
+\end{enumerate}
+
+\end{document}
