@@ -43,12 +43,19 @@ Note that you can and should rely on earlier results in proving later ones.
     \end{enumerate}
   \item (15\%) Prove that if $s \oplus t=[]$ then $s=t=[]$.
     \begin{enumerate}
-        \item by the injective property of Axiom of the List, we have that [] is not in the range of any $cons_{a}$
-        \item $if s \oplus t = []$, then $s = []$
-        \item $if s \oplus t = []$, then $s = []$
+        \item by the injective property of Axiom of the List, we have that $[]$ is not in the range of any $cons_{a}$
+        \item $if s \oplus t = []$, then $s$ and $t$ are all $[]$
+        \item Thus, s = t = []
     \end{enumerate}
 
   \item $(15 \%)$ Prove that if $s \oplus t=(a: u)$ then either $s=[]$ or $s=\left(a: s^{\prime}\right)$ for some $s^{\prime}$.
+  \begin{enumerate}
+    \item Assume that a is just any arbitrary element in A, then $(a : s')$ is just the transformation of list s after taking out an element in A. 
+    \item iff $s \oplus t = (a:s') \oplus t = a :(s' \oplus t)$, by clause 2
+    \item the case of $s = []$ is tritvial because a : t and a : u is the same as both u and t are all arbitrary elements 
+    \item Moreover, for the second case, $s'$ and t and u are all arbitrary, thus, it is the same. 
+
+  \end{enumerate}
 
 \end{enumerate}
 For the following problems, we define a function final : $A^{*} \rightarrow \mathcal{P}\left(A^{*}\right)$ recursively as follows:
@@ -63,10 +70,19 @@ We say that $s$ is a final sublist of $t$ iff $s \in$ final $t$.
 \begin{enumerate}
   \setcounter{enumi}{4}
   \item $(15 \%)$ Prove that [] is a final sublist of every list.
-
+  \begin{enumerate}
+    \item Assume that X is the set that has all the list and $x \in X$, then for every final function, we have $x = a: s$ and $\operatorname{final}(a: s) =\text { final } s \cup\{(a: s)\}$, since x is monotonicly popping out elements, it will reach [] as always. 
+    \item Thus [] will always be in the form of $a : s$ and then we can use clause 1 to get $\{[]\}$. Thus, we have the conclusion
+  \end{enumerate}
   \item $(10 \%)$ Prove that every list is a final sublist of itself.
-
+  \begin{enumerate}
+    \item Assume that x is an arbitrary list of all list, then $\operatorname{final}(a: s) =\text { final } s \cup\{(a: s)\}$ by clause 2, and x is (a:s), thus, we have ${final} (s) \cup \{x\}$. Since x $\in final x$, we say that x is a final sublist of itself. Therefore, as x is arbitrary, every list is a final sublist of itself. 
+  \end{enumerate}
   \item $(10 \%)$ Prove that $t$ is a final sublist of $s \oplus t$.
+  \begin{enumerate}
+    \item t $\in final(s \oplus t)$ iff ${final}(s \oplus t)\cup \{t\}$ 
+    \item $s \oplus t = (s:[]) \oplus t $
+  \end{enumerate}
 
   \item $(10 \%)$ Prove that if $s$ is a final sublist of $t$, then $t=u \oplus s$ for some $u$.
 
