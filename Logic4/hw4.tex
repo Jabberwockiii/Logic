@@ -80,11 +80,22 @@ We say that $s$ is a final sublist of $t$ iff $s \in$ final $t$.
   \end{enumerate}
   \item $(10 \%)$ Prove that $t$ is a final sublist of $s \oplus t$.
   \begin{enumerate}
-    \item t $\in final(s \oplus t)$ iff ${final}(s \oplus t)\cup \{t\}$ 
-    \item $s \oplus t = (s:[]) \oplus t $
+    \item t $\in final(s \oplus t)$ iff ${final}(t)\cup \{s \oplus t\}$ 
+    \item By the recursive structure, we have that t = a : u
+    \item $final(t) = final(a:u) = final u \cup \{(a:u)\}$ 
+    \item $\{(a:u)\} = \{t\}$
+    \item Thus, t $\in final(s \oplus t)$
   \end{enumerate}
 
   \item $(10 \%)$ Prove that if $s$ is a final sublist of $t$, then $t=u \oplus s$ for some $u$.
+  \begin{enumerate}
+    \item $s \in final (t)$
+    \item iff $final(a : u) = final(u) \cup \{(a:u)\}$ or $ final(a:s) = final(s) \cup \{(a:s)\}$, as s and u are all arbitrary
+    \item $ a : u = a : ([]\oplus u) = (a : []) \oplus u$ ,by clause 1 and 2 in {q1}
+    \item $(a:[]) = [a]$ is just arbitrary list, thus, it can be substituted as $s$ 
+    \item thus, we have $t = s \oplus u $
+    \item since u and s are all arbitrary, we have $t = u \oplus s$
+  \end{enumerate}
 
   \item $(10 \%)$ Prove that if $s \oplus s^{\prime}=t \oplus t^{\prime}$ then either $s^{\prime}$ is a final sublist of $t^{\prime}$ or $t^{\prime}$ is a final sublist of $s^{\prime}$.
 

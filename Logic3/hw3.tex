@@ -1,0 +1,131 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{stmaryrd}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true, linkcolor=blue, filecolor=magenta, urlcolor=cyan,}
+\urlstyle{same}
+
+\title{Problem Set 3 }
+
+
+\author{Advanced Logic}
+\date{}
+
+
+\begin{document}
+\maketitle
+
+21st September 2022
+
+\begin{enumerate}
+  \item (40\%) Suppose that $A$ is a set; $R$ is an injective relation on $A$; and $B$ is a subset of $A$ such that whenever $x \in B$, it is not the case that $R x x$. Let $C$ be the closure of $B$ under $R$. Prove that whenever $x \in C$, it is not the case that $R x x$.
+  \begin{enumerate}
+    \item To use induction, we need to have 2 steps:
+    \item first, show that every element of B does not have property Rxx
+    \item second, !Rxx is preserved.
+    \item Since B is that whenever x that is an element of B, x is also an element of A. Thus, we have if $x \in B$, $x \in A$, as B is a subset of A, and it is not the case that Rxx
+    \item Thus, every member of B has this property
+    \item Since C is the closure of B under R, it is that case the property of B is preserved. 
+    \item Thus, the inductive steps worked. 
+\end{enumerate}
+\end{enumerate}
+Hint: this will be a proof by induction.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item Prove that the following hold for all $m, n \in \mathbb{N}$\\
+(a) $(20 \%)$\\
+\text { double } n =n+n\\
+Base case: double 0  = 0 (Dz)\\
+induction step: \\
+Suppose double n = n + n, Then\\
+double(suc(n)) = suc(n) + suc(n), Since \\
+suc(n) + suc(n) = suc(suc(n+n)), and \\
+double(suc(n)) = suc(suc(double n)). (Ds)\\
+Therefore, 
+double(n) = n + n
+
+
+(b) $(10 \%)$\\
+m+n =n+m\\
+Base case: 0 + 0 = 0 + 0\\
+Base case can be proved by using (Az) and (As),\\
+assume that m is suc(n), then n + suc(n) = suc(n) + n\\
+as n + suc(n) = suc(n + n). \\
+Since n is just 0 it is proved. \\
+Induction Step: \\
+Suppose that m + n = n + m \\
+by(As), n + suc(m) = suc(n+m)\\
+Since n + 0 = n, \\
+suc(n+m) + 0 = suc(n + m)
+substitute n with 0, then\\
+0 + suc(m) = suc(0+m)
+suc(m) = suc(m), \\
+Thus, m + n = n + m\\
+(c) $(10 \%)$\\
+$\text { double } n =2 \times n$ \\
+base case:
+double(0) = 2 $\times 0$
+By (Mz), Since $n \times 0 = 0$, 2 = suc(suc(0)). Thus, \\
+2 is a case of n.\\
+So, (Mz) can be applied to the base case \\
+Induction Step:\\
+As I showed that n is just any suc(0).\\
+As, suc is a property that holds for all natural numbers \\
+and (Ms), $n \times suc(m) = (n\times m) + n$\\
+and (Ds), $double(suc(n)) = suc(suc(double n))$
+since 2 is just suc(suc(0))\\
+substitues 2 we can get double n = $2 \times n$ 
+
+(d) $(5 \%)$\\
+(e) $(5 \%)$\\
+(f) $(5 \%)$\\
+$(g)(5 \%)$
+\end{enumerate}
+$$
+\begin{aligned}
+0 \times n &=0 \\
+(\text { suc } n) \times m &=(n \times m)+m \\
+n \times m &=m \times n
+\end{aligned}
+$$
+If double $m=$ double $n$, then $m=n$
+
+Note: in these proofs you may assume the Axiom of Numbers and the following principles about addition, multiplication, and the 'double' function (which follow from their standard recursive definitions):
+
+(Dz)
+
+(Ds)
+
+$(\mathrm{Az})$
+
+(As)
+
+$(\mathrm{Mz})$
+
+(Ms)
+$$
+\begin{aligned}
+\text { double } 0 &=0 \\
+\text { double }(\operatorname{suc} n) &=\operatorname{suc}(\operatorname{suc}(\text { double } n)) \\
+n+0 &=n \\
+n+\operatorname{suc} m &=\operatorname{suc}(n+m) \\
+n \times 0 &=0 \\
+n \times \operatorname{suc} m &=(n \times m)+n
+\end{aligned}
+$$
+for any $n, m \in \mathbb{N}$. You may also assume the facts I give proofs of in the supplementary document called 'Proofs by induction: a guide'. Also, some of the later proofs will require on earlier ones. Remember too that ' 2 ' abbreviates 'suc(suc 0$)^{\prime}$ '.
+
+\begin{enumerate}
+  \setcounter{enumi}{4}
+  \item (10\% extra credit) Open the Lean Natural Numbers Game at \href{https://www}{https://www} . ma.imperial. ac. uk/ buzzard/xena/natural\_number\_game/ and play through (at least) the levels 'Tutorial World', 'Addition World', and 'Multiplication World'. To show that you've completed the levels, send us a screenshot of the last level of Multiplication World open on your computer screen, with your name showing somewhere in the screenshot (e.g. in a text editor window).
+\end{enumerate}
+Note that the facts you're proving in these levels of the game overlap a lot with the ones you're asked to prove in problem 2. So, you might find it helpful to play the game first and tackle problem 2 afterwards. Whichever order you do it in, it should be instructive to look at your proofs in problem 2 with your solutions to the game, and see how they have the same mathematical content.
+
+
+\end{document}

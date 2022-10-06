@@ -1,0 +1,20 @@
+Problem Set 5
+Advanced Logic
+1st October 2022
+Note: some of the following problems mention the function elements : $A^* \rightarrow \mathcal{P} A$. Recall that this is defined recursively, by the clauses
+elements [] $=\varnothing$
+elements $(a: s)=$ elements $s \cup\{a\}$
+1. (20\%) Prove that for any $s, t \in A^*$, elements $(s \oplus t)=$ elements $s \cup$ elements $t$.
+2. (30\%) Prove that $X \subseteq A$ is finite iff there exists $s \in A^*$ such that elements $s=X$.
+Hint: You'll need one inductive proof for each direction of this. Here and in all the following problems, you can use our official definition of finitude (Lecture 5) or the fact (Lecture 8) that a set is finite iff it is equinumerous with pred $n$ for some $n$.
+3. (30\%) Prove that every subset of a finite set is finite.
+You'll need a proof by induction, for which the following fact might be useful: $B \subseteq A \cup\{x\}$ iff either $B \subseteq A$ or $B=B^{\prime} \cup\{x\}$ for some $B^{\prime} \subseteq A$.
+4. (10\%) Prove that whenever $A$ and $B$ are finite sets, so is $A \cup B$.
+Hint: One strategy would be to first prove (by induction) that the claim is true in the special case where $A \cap B=\varnothing$, and finally prove from this and problem 1 that it is true in general.
+5. (10\%) Prove that whenever $A$ and $B$ are finite sets, so is $A \times B$.
+Hint: Once again, you'll need an induction. The following facts may be useful: (i) $A \times\{x\} \sim A$ (for any $A, x)$; (ii) $(A \cup B) \times C=(A \times C) \cup(A \times C)$.
+For the two extra-credit problems, suppose that $R \subseteq(D \times D) \times D, B \subseteq D$, and $C$ is the closure of $B$ under $R$. We recursively define a subset $V$ of $D^*$ (the "derivations") as follows:
+- [] $\in V$
+- $(x: s) \in V$ iff $s \in V$ and either $x \in B$ or there exist $y, z \in$ elements $s$ such that $R y z x$.
+5. (5\%) Prove that if $s \in V$ and $t \in V, s \oplus t \in V$.
+6. (5\%) Prove that that for any $a \in D, a \in C$ iff there exists $s \in D^*$ such that $(a: s) \in V$.

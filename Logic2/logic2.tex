@@ -50,12 +50,8 @@
   \end{enumerate}
   \item (50\%) Show that $f$ is injective iff $f^{*}$ is surjective.
   \begin{enumerate}
-    \item Since iff is a biconditional symbol, we consider two cases one from the left and the other from the right. 
-    \item left to right: assume that f is injective, then we can conclude that for any arbitary element $x_{1}$ and $x_{2}$ in set A, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$.
-    \item By the definition, $f^{*}$ is surjective means that we assume a function that for every y in set B there is some x in set A such that Rxy.
-    \item therefore, injective property assumes that every y has only one x. This case of one x can be substitute by some x. Thus. $f^{*}$ is surjective.
-    \item From the other direction, we assume that $f^{*}$ is surjective, therefore for every y in set B, there is some x in set A such that Rxy. By the definition of injective, 
-    $f$ is injective means that for any arbitary element $x_{1}$ and $x_{2}$ in set A, if $f(x_{1})=f(x_{2})$, then $x_{1}=x_{2}$. Moreover, since it is a function so it is both serial and functional. serial property ensures that there is only exact one x for every y. Thus, $f$ is injective.
+    \item Since we already do the reasoning above, we can just use the conclusion of the reasoning and take it as granted. 
+    \item Assume that $f^{*}$ is surjective which means that for every y in B there is some x in A. From (1)-(c), there exists an relation that $f^{*} Y=\{x \in A \mid f x \in Y\}$. To prove it is injective, we need to that when relation exists, and there is an arbitary element in set A which is x, then there is no other element in set A that can be putted into the relation and the result is the same. The existence of the relation is the thing we need to solve. Thankful, we already have the relation from the conclution of (1)-(c). Thus, we can use the relation to prove that $f$ is injective. This x is an element of A. 
   \end{enumerate}
   \item (30\%) Show that $f$ is surjective iff $f^{*}$ is injective. 
   \begin{enumerate}
@@ -68,6 +64,10 @@
   \setcounter{enumi}{2}
   \item (10\%) Using the Axiom of Separation to show that there is no set that contains all sets. (Hint: adapt the reasoning in Russell's Paradox.)
   \begin{enumerate}
+    \item first of all, I am confused with the question that the "Axiom of Seperation" and the definition in the power point "Axiom Schema of Seperation". Are Axiom and Axiom of Seperation the same thing in this class? For the following proof, I will assume this is the definition in the power point.
+    \item Axiom Schema of Separation:
+For every set $A$, there is a set $\{x \in A \mid \phi(x)\}$ whose elements are all and only those objects $x$ such that $x \in A$ and $\phi(x)$
+    \item Assumes that there exists a set that contains all sets. Let's call it $A$. According to the question, A is the set that contains all set. Therefore, A contains itself. However, according to the Axiom Schema of Seperation and the definition of the notation of $\phi$, it is saying that x is blank.(by discussing with professor). Thus, either the deinition of $\phi$ is wrong or the definition of axiom schema of seperation is wrong or the assumption that set contains all set is wrong. Thus, the assumption is wrong. Thus, this set does not exists. 
     \item 
   \end{enumerate}
 
