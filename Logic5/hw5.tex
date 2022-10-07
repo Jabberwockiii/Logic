@@ -1,20 +1,113 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{stmaryrd}
+\usepackage{mathrsfs}
+
+\title{Advanced Logic: Problem Set 05 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+\begin{itemize}
+  \item Your proofs may appeal to any facts stated in the first three lectures.
+
+\end{itemize}
 Problem Set 5
 Advanced Logic
 1st October 2022
 Note: some of the following problems mention the function elements : $A^* \rightarrow \mathcal{P} A$. Recall that this is defined recursively, by the clauses
-elements [] $=\varnothing$
-elements $(a: s)=$ elements $s \cup\{a\}$
-1. (20\%) Prove that for any $s, t \in A^*$, elements $(s \oplus t)=$ elements $s \cup$ elements $t$.
-2. (30\%) Prove that $X \subseteq A$ is finite iff there exists $s \in A^*$ such that elements $s=X$.
-Hint: You'll need one inductive proof for each direction of this. Here and in all the following problems, you can use our official definition of finitude (Lecture 5) or the fact (Lecture 8) that a set is finite iff it is equinumerous with pred $n$ for some $n$.
-3. (30\%) Prove that every subset of a finite set is finite.
-You'll need a proof by induction, for which the following fact might be useful: $B \subseteq A \cup\{x\}$ iff either $B \subseteq A$ or $B=B^{\prime} \cup\{x\}$ for some $B^{\prime} \subseteq A$.
-4. (10\%) Prove that whenever $A$ and $B$ are finite sets, so is $A \cup B$.
-Hint: One strategy would be to first prove (by induction) that the claim is true in the special case where $A \cap B=\varnothing$, and finally prove from this and problem 1 that it is true in general.
-5. (10\%) Prove that whenever $A$ and $B$ are finite sets, so is $A \times B$.
-Hint: Once again, you'll need an induction. The following facts may be useful: (i) $A \times\{x\} \sim A$ (for any $A, x)$; (ii) $(A \cup B) \times C=(A \times C) \cup(A \times C)$.
-For the two extra-credit problems, suppose that $R \subseteq(D \times D) \times D, B \subseteq D$, and $C$ is the closure of $B$ under $R$. We recursively define a subset $V$ of $D^*$ (the "derivations") as follows:
-- [] $\in V$
-- $(x: s) \in V$ iff $s \in V$ and either $x \in B$ or there exist $y, z \in$ elements $s$ such that $R y z x$.
-5. (5\%) Prove that if $s \in V$ and $t \in V, s \oplus t \in V$.
-6. (5\%) Prove that that for any $a \in D, a \in C$ iff there exists $s \in D^*$ such that $(a: s) \in V$.
+\begin{enumerate}
+    \item elements [] $=\varnothing$
+    \item elements $(a: s)=$ elements $s \cup\{a\}$
+
+\end{enumerate}
+\begin{enumerate}
+    \item (20\%) Prove that for any $s, t \in A^*$, elements $(s \oplus t)=$ elements $s \cup$ elements $t$.
+    \begin{enumerate}
+    \item Base case: $s = []$ and $t = []$
+    \begin{enumerate}
+        \item elements $([] \oplus []) = elements ([])$, by t1
+        \item elements $[] = \varnothing$, by c1
+        \item $\varnothing = element(a:s) = {elements (s)} \cup {\{a\}} = {elements (\varnothing)\cup \{ \varnothing \} }$, by c1 and c2, 
+    \end{enumerate}
+    \item Induction step: 
+    \begin{enumerate}
+    \item Assume that for any $s, t \in A^*$, elements $(s \oplus t)=$ elements $s \cup$ elements $t$.
+    \item elements $(s \oplus t)=$ elements $((a:s) \oplus t) =$ elements $(a:(s \oplus t)) =$ elements $(a: s)=$ elements $s \cup\{a\}$ by c2, s = $s \oplus t$ in this case
+    \item elements $s \cup\{a\} = elements (s) \cup\{a\}$, by induction hypothesis
+    \item therefore, it is proved with a recursion structure
+    \end{enumerate}
+    \end{enumerate}
+    \item (30\%) Prove that $X \subseteq A$ is finite iff there exists $s \in A^*$ such that elements $s=X$.
+    Hint: You'll need one inductive proof for each direction of this. Here and in all the following problems, you can use our official definition of finitude (Lecture 5) or the fact (Lecture 8) that a set is finite iff it is equinumerous with pred $n$ for some $n$.
+    \begin{enumerate}
+    \item left to right
+    \begin{enumerate}
+        \item Base case
+        \begin{enumerate}
+            \item Assume that $X = \varnothing, $ prove $  X\subseteq A$ is finite
+            \item there is only one element and relation in $X$ and , which is $\varnothing$ that is both element and a special case of relation(HW1!!), so $X\subseteq A$ is finite in the case that $X = \varnothing = s \in A^*$ and this case is trivial 
+        \end{enumerate}
+    \end{enumerate}
+    \begin{enumerate}
+        \item Induction step
+        \begin{enumerate}
+            \item Assume that if $X \subseteq A$, then it is equinumerous with pred $n$ for some $n$.(one direction)
+            \item To prove that it is equinumerous, we need to prove that there exists $s \in A^*$ such that elements $s=X$ and X $ \subseteq A $.
+            \item since X $\subseteq A$, for every $x \in X$, there exists $a \in A$. Also, there is a bijection relation between the set of x and a. Thus, X = A, therefore, it is equinumerous by recursion. The equation here is proved by the Axiom of Extension. and the set of pred n is the set of x, and the set of n is the set of a. 
+        \end{enumerate}
+    \end{enumerate}
+    \item right to left
+    \begin{enumerate}
+        \item Base case 
+        \begin{enumerate}
+            \item Assume that it is equinumerous with pred $n$ for some $n$
+            \item f : pred(n) to n is bijection because it is one to one and onto
+            \item in the base case of $\emptyset$, it is trivial to prove the bijection
+        \end{enumerate}
+        \item Induction step
+        \begin{enumerate}
+            \item Assume that if it is equinumerous with pred $n$ for some $n$.(the other direction), then $X \subseteq A$ 
+            \item Since it is equinumerous, then there is a bijection from the set of pred n to the set of n. Thus, we can say the cardinality of $X$ is equal to A. (recursion)
+            \item Thus, X equals A, and it is a subset of A. by IH
+        \end{enumerate}
+    \end{enumerate}
+
+    \end{enumerate}
+    \item (30\%) Prove that every subset of a finite set is finite.
+    You'll need a proof by induction, for which the following fact might be useful: $B \subseteq A \cup\{x\}$ iff either $B \subseteq A$ or $B=B^{\prime} \cup\{x\}$ for some $B^{\prime} \subseteq A$.
+    \begin{enumerate}
+    \item Base case:
+    \begin{enumerate}
+        \item Assume that we have a finite set A. A is an arbitrary finite set. the smallest finite set(in this case B) is emptyset, thus it is trivial to prove that the subset of an emepty set is finite.
+    \end{enumerate}
+    \item Induction Step:
+    \begin{enumerate}
+        \item Assume that there is some arbitrary subset of B. we can call it b. $b \in B, b \in A$, given that B is a subset of A from the fact(case 1) or a union of elements(case 2). 
+        \item In case 2, $B' \cup \{x\}$ x is finite and is trivial. Thus, we can consider B' as a transformation of iteration of popping up x. Therefore, B' is an iteration representation of B is finite. And B is a recursion representation of finitude. 
+        \item In both case of 1 and 2, we can always use a recursion to substitute b into b' which represents the next b in B. Therefore, the finitude is transformed form the emptyset basecase to the every b which together is just B. 
+    \end{enumerate}
+    \end{enumerate}
+    \item (10\%) Prove that whenever $A$ and $B$ are finite sets, so is $A \cup B$.
+    Hint: One strategy would be to first prove (by induction) that the claim is true in the special case where $A \cap B=\varnothing$, and finally prove from this and problem 1 that it is true in general.
+    \item (10\%) Prove that whenever $A$ and $B$ are finite sets, so is $A \times B$.
+    Hint: Once again, you'll need an induction. The following facts may be useful: (i) $A \times\{x\} \sim A$ (for any $A, x)$; (ii) $(A \cup B) \times C=(A \times C) \cup(A \times C)$.
+    For the two extra-credit problems, suppose that $R \subseteq(D \times D) \times D, B \subseteq D$, and $C$ is the closure of $B$ under $R$. We recursively define a subset $V$ of $D^*$ (the "derivations") as follows:
+    - [] $\in V$
+    - $(x: s) \in V$ iff $s \in V$ and either $x \in B$ or there exist $y, z \in$ elements $s$ such that $R y z x$.
+    5. (5\%) Prove that if $s \in V$ and $t \in V, s \oplus t \in V$.
+    \item (5\%) Prove that that for any $a \in D, a \in C$ iff there exists $s \in D^*$ such that $(a: s) \in V$.
+\end{enumerate}
+
+\end{document}
+\end{enumerate}
+\end{enumerate}
+\end{document}
