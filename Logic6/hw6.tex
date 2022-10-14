@@ -1,0 +1,116 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{stmaryrd}
+
+\title{Problem Set 6 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+Advanced Logic
+
+9th October 2022
+
+In the following problems, Arith stands for the ' 'signature of the language of arithmetic": recall that this has one individual constant 0 , one singulary function symbol suc, two binary function symbols $+$ and $x$, and one binary predicate $\leq$. See below for a reminder of the relevant definitions of $F V$ and $[t / v]$.
+
+Note: problems 2-4 ask you to prove something about all terms and formulae of an arbitrary first-order signature $\Sigma$. You may, if you wish, just prove these claims for the special case where $\Sigma$ is Arith. This will lengthen the proofs a bit, but you may find it helpful if you're getting tripped up by notation like ' $f\left(t_{1}, \ldots, t_{n}\right)$ ' and ' $R\left(t_{1}, \ldots, t_{n}\right)$ '.
+
+\begin{enumerate}
+  \item (a) (30\%) Prove that no term of the language of arithmetic (i.e., no member of Terms(Arith)) contains the character a.
+  \item Answer a
+\end{enumerate}
+(b) $(30 \%)$ Using the result of part (a), prove that no formula of the language of arithmetic (i.e., no member of $\mathcal{L}($ Arith )) contains the character a.
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (a) (15\%) Prove that whenever $s, t \in \operatorname{Terms}(\Sigma)$ and $v \neq F V(s), s[t / v]=s$.
+\end{enumerate}
+(b) $(10 \%)$ Using the result of part (a), prove that whenever $P \in \mathcal{L}(\Sigma), t \in \operatorname{Terms}(\Sigma)$, and $v \neq F V(P), P[t / v]=P$
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (a) (10\%) Prove that whenever $s, t \in \operatorname{Terms}(\Sigma)$ and $v \in F V(s), F V(s[t / v])=(F V(s) \backslash$ $\{v\}) \cup F V(t)$
+\end{enumerate}
+(b) (5\%) Using the result of part (a), prove that whenever $P \in \mathcal{L}(\Sigma), t \in \operatorname{Terms}(\Sigma)$, and $v \in F V(P), F V(P[t / v])=(F V(P) \backslash\{v\}) \cup F V(t)$.
+
+Additional problems (10\% extra credit for successfully solving any one of these.)
+
+\begin{enumerate}
+  \item Suppose that $v$ and $v^{\prime}$ are distinct variables and $t$ and $t^{\prime}$ are terms in which neither $v$ nor $v^{\prime}$ occur free. Show that (a) for every term $s, s[t / v]\left[t^{\prime} / v^{\prime}\right]=s\left[t^{\prime} / v^{\prime}\right][t / v]$, and (b) for every formula $P, P[t / v]\left[t^{\prime} / v^{\prime}\right]=P\left[t^{\prime} / v^{\prime}\right][t / v]$.
+
+  \item (Optional, ungraded) Define the "standard numeral" function $\langle\cdot\rangle: \mathbb{N} \rightarrow$ Terms(Arith) recursively as follows:
+
+\end{enumerate}
+$$
+\begin{aligned}
+\langle 0\rangle &=0 \\
+\langle\operatorname{suc} n\rangle &=\operatorname{suc}(\langle n\rangle)
+\end{aligned}
+$$
+Suppose we have some funtion $g: \operatorname{Var} \rightarrow \mathbb{N}$. Recursively define a function $d$ : Terms $($ Arith $) \rightarrow \mathbb{N}$ such that $d(v)=g(v)$ for every variable $v$ and $d(\langle n\rangle)=n$ for every $n \in \mathbb{N}$. Prove that the function you defined meets these requirements.
+
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (Optional, ungraded) Suppose that we have a first-order signature $\Sigma$ that is "well-behaved' in the following sense: no function symbol or predicate is an initial substring of any other funtion symbol or predicate, and no function symbol or predicate has a variable as an initial substring. Let PolishTerms $(\Sigma)$ (the set of "terms in Polish notation" over $\Sigma$ ) be the closure of Var under the family of functions $\left\langle s_{1}, \ldots, s_{n}\right\rangle \mapsto f \oplus t_{1} \oplus \cdots \oplus t_{n}$ where $f$ is an $n$-ary function symbol of $\Sigma$. (Note that unlike our usual definition of term, this one does not use parentheses and commas.)
+\end{enumerate}
+Prove unique readability for Polish terms: i.e. that whenever $s_{1}, \ldots, s_{m}, t_{1}, \ldots, t_{n} \in$ $\operatorname{PolishTerms}(\Sigma), f$ is an $m$-ary function symbol of $\Sigma$, and $g$ is an $n$-ary function symbol of $\Sigma$, if $f s_{1} \ldots s_{m}=g t_{1} \ldots t_{n}$, then $f=g$ and $m=n$ and $s_{1}=t_{1}$ and $\ldots$ and $s_{m}=t_{m}$.
+
+Definitions The notations ' $F V^{\prime}$ and ' $[t / v]$ ' are used ambiguously for two different functions, one defined on $\operatorname{Terms}(\Sigma)$ and the other on $\mathcal{L}(\Sigma)$. (Or we could think of them as standing for the union of those two functions.)
+
+Where $\Sigma$ is a first-order signature with predicates $R_{\Sigma}$, function symbols $F_{\Sigma}$, and arity function $a_{\Sigma}$, the function $F V: \operatorname{Terms}(\Sigma) \rightarrow \mathcal{P}$ (Var) is defined recursively by:
+$$
+\begin{array}{rlr}
+F V(v) & =\{v\} & \text { (for } v \in \operatorname{Var}) \\
+F V(c) & =\emptyset & \left.\quad \text { (for } c \in F_{\Sigma} \text { with } a_{\Sigma}(c)=0\right) \\
+F V\left(f\left(t_{1}, \ldots, t_{n}\right)\right) & =F V\left(t_{1}\right) \cup \cdots \cup F V\left(t_{n}\right) \quad\left(\text { for } f \in F_{\Sigma} \text { with } a_{\Sigma}(f)=n>0\right)
+\end{array}
+$$
+The companion function $F V: \mathcal{L}(\Sigma) \rightarrow \mathcal{P}(\operatorname{Var})$ is defined recursively as follows:
+$$
+\begin{aligned}
+F V\left(F\left(t_{1}, \ldots, t_{n}\right)\right) &=F V\left(t_{1}\right) \cup \cdots \cup F V\left(t_{n}\right) \quad\left(\text { for } F \in R_{\Sigma} \text { with } a_{\Sigma}(F)=n>0\right) \\
+F V\left(t_{1}=t_{2}\right) &=F V\left(t_{1}\right) \cup F V\left(t_{2}\right) \\
+F V(\neg P) &=F V(P) \\
+F V(P \wedge Q) &=F V(P) \cup F V(Q) \\
+F V(P \vee Q) &=F V(P) \cup F V(Q) \\
+F V(P \rightarrow Q) &=F V(P) \cup F V(Q) \\
+F V(\forall v P) &=F V(P) \backslash\{v\} \\
+F V(\exists v P) &=F V(P) \backslash\{v\}
+\end{aligned}
+$$
+For any $t \in \operatorname{Terms}(\Sigma)$ and $v \in \operatorname{Var}$, the function $[t / v]: \operatorname{Terms}(\Sigma) \rightarrow \operatorname{Terms}(\Sigma)$ (written in postfix position) is defined recursively by
+$$
+\begin{array}{rlr}
+u[t / v] & =\left\{\begin{array}{ll}
+t & \text { if } u=v \\
+u & \text { if } u \neq v
+\end{array} \quad \quad \text { (for } u \in \operatorname{Var}\right)
+\end{array}
+$$
+The companion function $[t / v]: \mathcal{L}(\Sigma) \rightarrow \operatorname{Terms}(\Sigma)$ is defined recursively as follows:
+$$
+\begin{aligned}
+F\left(t_{1}, \ldots, t_{n}\right)[t / v] &=F\left(t_{1}[t / v], \ldots, t_{n}[t / v]\right) \\
+(\neg P)[t / v] &=\neg(P[t / v]) \\
+(P \wedge Q)[t / v] &=P[t / v] \wedge Q[t / v] \\
+(P \vee Q)[t / v] &=P[t / v] \vee Q[t / v] \\
+(P \rightarrow Q)[t / v] &=P[t / v] \rightarrow Q[t / v] \\
+(\forall u P)[t / v] &= \begin{cases}\forall u P & \text { if } v=u \\
+\forall u(P[t / v]) & \text { if } v \neq u \text { and }(u \notin F V(t) \text { or } v \notin F V(P)) \\
+\text { undefined } & \text { if } v \neq u \text { and } u \in F V(t) \text { and } v \in F V(P)\end{cases} \\
+\{\exists(\exists u P)[t / v]&= \begin{cases}\exists u \\
+\exists u(P[t / v]) & \text { if } v \neq u \text { and }(u \notin F V(t) \text { or } v \notin F V(P)) \\
+u n d e f i n e d & \text { if } v \neq u \text { and } u \in F V(t) \text { and } v \in F V(P)\end{cases}
+\end{aligned}
+$$
+
+
+\end{document}
