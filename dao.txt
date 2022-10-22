@@ -17,3 +17,5 @@ With assumption and without assumption, it's just a different notation. Predicat
 
 
 
+quantification theory 
+even the identity law does not work 

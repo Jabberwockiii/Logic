@@ -1,0 +1,46 @@
+3:20 
+
+for all number x, there exists some y that 
+
+every number has a successor 
+not every number is a successor 
+
+10:00 start work on logic 
+
+Cantor theorem 
+
+how to proof?
+target and relevance 
+make it alive logic!
+
+Framework provides a goal
+
+45 minutes: 
+read through the guide 
+
+5, 3, 4 size tank 
+5, 3 = 8 amount of water
+
+25 logic 
+26 dis-sys
+
+8:25 start 
+closure,
+arithmetic proof 
+
+10:00 closure
+
+proof by induction 
+one dirction: N ->
+two direction: n <=> m
+base case: basic includes 0
+inductive step: 
+1. one extra: suc(n)
+2. suppose: origianl proof(available)
+    2a. can be multiple supposition case, we use the supposition directly!!!
+3. target: suc(n) substitute n in OP
+
+operation: multi paramerter of Cartesian product function
+
+11:00 read trac 
+shading allow dup or not 
