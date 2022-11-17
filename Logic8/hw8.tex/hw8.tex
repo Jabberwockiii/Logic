@@ -1,0 +1,107 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\title{Problem Set 8 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+Advanced Logic
+
+30th October 2022
+
+Due date: Friday, 4 November.
+
+\begin{enumerate}
+  \item (50\%) Prove the Substitution Lemma for Terms: for any signature $\Sigma$, any terms $s$ and $t$ of $\Sigma$, any variable $v$, any structure $S$ for $\Sigma$, and any assignment $g$ for $S$,
+\end{enumerate}
+
+$$
+\llbracket t[s / v] \rrbracket_{S}^{g}=\llbracket t \rrbracket_{S}^{g\left[v \mapsto \llbracket s \rrbracket_{S}^{g}\right]}
+$$
+Hint: prove this by induction on the construction of terms (should it be $t$ or $s ?$ )
+
+Reminder:
+$$
+g\left[v \mapsto \llbracket s \rrbracket_{S}^{g}\right](u)= \begin{cases}\llbracket s \rrbracket_{S}^{g} & \text { if } u=v \\ g u & \text { otherwise }\end{cases}
+$$
+
+Answer for q1 
+\begin{enumerate}
+    \item costant case, variable case, one place function case, 2 place function case and so on 
+    \item Induction Hypothesis: The construction of t(assume the hint). because $t[s/v]$ is substitute the occurence of variable v with term s in the term t. 
+    \item there are two cases for the construction of t, either it is gu or gs. 
+    \item gs is the case that const case, n-place function case, and ordinary variable besides u = v
+    \item To prove the lemma, we can prove from two direction prove each direction is a subset of the other
+    \item left to right:
+    \item $\llbracket t[s / v] \rrbracket_{S}^{g} \subseteq \llbracket t \rrbracket_{S}^{g\left[v \mapsto \llbracket s \rrbracket_{S}^{g}\right]}$
+    \item if t is a constant, then $\llbracket c[s / v] \rrbracket_{S}^{g}$ = c 
+    \item as the construction said, $\llbracket t \rrbracket_{S}^{g\left[v \mapsto \llbracket s \rrbracket_{S}^{g}\right]}$, $v \mapsto \llbracket s \rrbracket_{S}^{g}$, has two cases, gu or gs, however, since t is constant, the right side is also costant.
+    \item gu = c, gs = c 
+    \item $c \subseteq c$, it is proved, constant is the base case 
+    \item for the variable case, we uses the IH. there are two cases for IH, either u = v or u != v, if u = v, then we use gs. then t contains s. if u != v, then we have gu. Since u does not occur, it is gu = v. In both cases, the $\subseteq$ holds as t contains s and v by $t[u/v]$,
+    \item for the n-place function cases, 
+    \item for a n-place function, case, it is the individual of the each single term
+    \item for each single term, the reasoning is similar, and the $\subseteq$ is hold. 
+    \item Thus, the left to right direction is proved
+    \item For the right to left direction, the reasoning is the same
+    \end{enumerate}
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (30\%) Using the result from part 1, prove the Substitution Lemma for Formulae: for any signature $\Sigma$, any term $s$ of $\Sigma$, any formula $P$ of $\Sigma$, any variable $v$, any structure $S$ for $\Sigma$, and any assignment $g$ for $S$,
+\end{enumerate}
+$$
+S, g \Vdash P[s / v] \text { iff } S, g\left[v \mapsto \llbracket s \rrbracket_{S}^{g}\right] \Vdash P
+$$
+Hint: prove this by induction on the construction of formulae. In the induction step for quantifiers, you will need to separately consider the case of formulae that begin with $\forall v$ (or $\exists v$ ) and formulae that begin with $\forall u$ (or $\exists u$ ) for some other variable $u$. You may if you wish rely on the "Irrelevance Lemma" according to which if $g(u)=h(u)$ for all $u \in F V(Q), S, g \Vdash Q$ iff $S, h \Vdash Q$.
+\begin{enumerate}
+  \item begin the proof by the construction of $\vdash$
+  \item in the base case, formulas contains only empty set. Thus, it is trivial that the target is valid
+  \item IH: $\forall v$, $\exists v$
+  \item from right to left (it looks like this direction is easier)
+  \item In this case, $\vdash$ has all the formulas. By substitution lemma, we can substitute any variable with another term if this term is in t. Since t is in one of the formula, P is a logical consequence of S and s which are the structure and the term.
+  \item Since it's a logical sequent, the ordered pair $\vdash P$ is valid.
+  \item left to right
+  \item By expanding the definition of the assignment function which convert variables to certain terms on the domain of the formula transformation, we have the denotation exposed. The denotion is the assignment function after the transformation with respect to the structure.
+  \item this is the substitution lemma in the other direction.
+    \item IH: $\forall u$, $\exists u$ 
+    \item This induction hypothese is similar, but it is the case that if u = v. Thus, we use the same reasoning of using the substitution lemma but we use the other special case of substituting the variable with a new one.  
+\end{enumerate}
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item (10\%) Using the result from part 2, prove the steps in the proof of the Soundness Theorem corresponding to the $\forall$ Elim and $\exists$ Intro rules. That is: show that if $\Gamma \vDash \forall v P$ then $\Gamma \vDash P[s / v]$ for every term $s$, and that if $\Gamma \vDash P[s / v], \Gamma \vDash \exists v P$.
+
+  \item (5\%) Using the result from part 2, prove the step in the proof of the Soundness Theorem corresponding to the $=$ Elim rule. That is: show that if $\Gamma \vDash P[s / v]$ and $\Gamma \vDash s=t$, then $\Gamma \vDash P[t / v]$
+
+  \item (5\%) Using the result from part 2, prove the step in the proof of the Soundness Theorem corresponding to the $\exists$ Elim rule. That is: show that if $\Gamma \vDash \exists v P$ and $\Gamma, P[u / v] \vDash Q$, then $\Gamma \vDash Q$, provided that $u$ is not free in $\Gamma, Q$, or $\exists v P$.
+
+\end{enumerate}
+Give examples to show that this can fail when (i) $u$ is free in $\Gamma$ though not in $Q$ or $\exists v P$; (ii) $u$ is free in $Q$ though not in $\Gamma$ or $\exists v P$; (iii) $u$ is free in $\exists v P$ though not in $\Gamma$ or $Q$ EXTRA CREDIT (2.5\% each, up to a maximum of 10\%) Prove the remaining facts about logical consequence required to complete the proof of the Soundness Theorem, namely:
+
+\begin{enumerate}
+  \item If $\Gamma \vDash P$ and $\Gamma \vDash Q$ then $\Gamma \vDash P \wedge Q(\wedge \operatorname{Intro})$
+
+  \item If $\Gamma \vDash P \wedge Q$ then $\Gamma \vDash P$ and $\Gamma \vDash Q(\wedge$ Elim1 and $\wedge$ Elim2).
+
+  \item If $\Gamma, P \vDash Q$ then $\Gamma \vDash P \rightarrow Q(\rightarrow$ Intro $)$
+
+  \item If $\Gamma \vDash P \rightarrow Q$ and $\Gamma \vDash P$ then $\Gamma \vDash Q(\rightarrow$ Elim $)$
+
+  \item If $\Gamma, P \vDash Q$ and $\Gamma, P \vDash \neg Q$ then $\Gamma \vDash \neg P(\neg \operatorname{Intro})$
+
+  \item If $\Gamma \vDash \neg \neg P$ then $\Gamma \vDash P(\mathrm{DNE})$.
+
+  \item $\vDash t=t$ for every term $t(=$ Intro $)$.
+
+\end{enumerate}
+
+\end{document}

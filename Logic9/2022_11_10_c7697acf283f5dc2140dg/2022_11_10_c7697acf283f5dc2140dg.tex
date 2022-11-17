@@ -1,0 +1,69 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\title{Problem Set 9 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+Advanced Logic
+
+9th November 2022 (apologies for late release!)
+
+Due date: Friday, 11 November.
+
+\begin{enumerate}
+  \item Suppose that \(h\) is a homomorphism from \(S\) to \(S^{\prime}\), where \(S\) and \(S^{\prime}\) are structures for some signature \(\Sigma\)
+\end{enumerate}
+
+(a) \((30 \%)\) Show that $\llbracket t \rrbracket_{S^{\prime}}^{h \circ g}=h\left(\llbracket t \rrbracket_S^g\right)$ for every term \(t\) of \(\Sigma\) and assignment \(g\) for \(S\).
+\begin{enumerate}
+  \item Since homomorphism is the function that maps the domains of two structure with interpretation of symbols and predicates(= or iff), thus, we get a expanded domain, one element is from The structure interpretation of variable terms(g). And the other is function from domain to domain. The variable term is that always an ordered list of natural number. 
+  \item Thus, the right hand side is saying that the homomorphism of the term t after the denotation in s on g. Since function is injective, for every object after denotation, it has only one object in the domain S'. This object is an ordered list of natural numbers after interpretation of symbols and predicates.
+  \item From the left hand side, $h \circ g$ is concatenating the domain of g which is D with the h, which is D'. This is the case that we get a new assignment function. Thus, this also means that the term after interpretation is on D'
+  \item For both side, it is on D' and it is either bijection or a function. There is only one result for one term. And the closure is ensured by the assignment function and the structure.
+  \item Thus, it is proved.  
+
+\end{enumerate}
+(b) \((30 \%)\) Use the previous result to show that if \(h\) is an embedding, then for every quantifier-free formula \(P\) of \(\Sigma\) and assignment \(g\) for \(S, S^{\prime}, h \circ g \Vdash P\) iff \(S, g \Vdash P\).
+\begin{enumerate}
+  \item right to left. Assume that $S, g \Vdash P$ is valid, then $ S, g \Vdash \forall v P$ and $S,g \Vdash \exists vP$ By quantifier introduction. 
+  \item For the quantifier, it is applicable to use the identity law to  
+\end{enumerate}
+(c) (20\%) Show that if \(h\) is an isomorphism, the claim in part (b) is true for all formulae (including those with quantifiers).
+
+(d) (5\%) Explain why (c) implies that isomorphic structures are elementarily equivalent.
+
+Definitions: If \(S\) has domain \(D\) and interpretation function \(I\) and \(S^{\prime}\) has domain \(D^{\prime}\) and interpretation function \(I^{\prime}\), a homomorphism from \(S\) to \(S^{\prime}\) is a function \(h: D \rightarrow D^{\prime}\) such that for every \(n\)-ary function symbol \(f\) of \(\Sigma, h\left(I_{f}\left(x_{1}, \ldots, x_{n}\right)=\right.\) \(I_{f}^{\prime}\left(h x_{1}, \ldots, x_{n}\right)\) and for every \(n\)-ary predicate \(F\) of \(\Sigma,\left\langle h x_{1}, \ldots, h x_{n}\right\rangle \in I_{F}^{\prime}\) whenever \(\left\langle x_{1}, \ldots, x_{n}\right\rangle \in I_{F}\)
+
+An embedding is a homomorphism \(h\) with the further properties that (i) \(h\) is injective and (ii) \(\left\langle h x_{1}, \ldots, h x_{n}\right\rangle \notin I_{F}^{\prime}\) whenever \(\left\langle x_{1}, \ldots, x_{n}\right\rangle \notin I_{F}\).
+
+An isomorphism is an embedding that is surjective.
+
+Two structures are elementarily equivalent iff the same sentences are true in them.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (15\%) Prove the following (thus filling in one of the steps in the proof of the Completeness Theorem that was left as an exercise): if a set of formulae \(\Gamma\) is consistent and negation-complete, then for any formulae \(P\) and \(Q, P \vee Q \in \Gamma\) iff either \(P \in \Gamma\) or \(Q \in \Gamma\)
+\end{enumerate}
+
+\section{EXTRA CREDIT}
+\begin{enumerate}
+  \item (5\%) Prove the following (thus filling in another missing step in the proof of the Completeness Theorem): if a set of formulae \(\Gamma\) is consistent and negation-complete, then for any formulae \(P\) and \(Q, P \rightarrow Q \in \Gamma\) iff either \(P \notin \Gamma\) or \(Q \in \Gamma\).
+
+  \item (5\%) Prove the following (thus filling in the last missing step in the proof of the Completeness Theorem): if a set of formulae \(\Gamma\) is consistent, negation-complete, and witness-complete then for any formula \(P\) and variable \(v, \exists v P \in \Gamma\) iff there is some term \(t\) such that \(P[t / v] \in \Gamma\).
+
+  \item (10\% - more of a challenge) Show that if a structure \(S\) has a finite domain, then there is a sentence \(P\) true in \(S\) such that any other structure for the same signature in which \(P\) is true is isomorphic to \(S\). Hint: Try a sentence that begins with \(\exists x_{1} \ldots \exists x_{n}\), where \(n\) is the size of \(S\) 's domain. What goes inside the existential quantifiers will be a big conjunction that, intuitively, says that \(x_{1}, \ldots, x_{n}\) are the only things there are and that they are all distinct, and fully characterises how they are related by the function symbols and predicates of the signature.
+
+\end{enumerate}
+
+\end{document}

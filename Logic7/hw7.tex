@@ -1,0 +1,118 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{mhchem}
+\usepackage{stmaryrd}
+\usepackage{graphicx}
+
+\title{Problem Set 7 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+Advanced Logic
+
+18th October 2022
+
+Due date: Friday, 28th October.
+
+\begin{enumerate}
+  \item (50\%) Show that $\Gamma, P, Q \vdash R$ if and only if $\Gamma, P \wedge Q \vdash R$ (for any formulas $P, Q, R$ and set of formulas $\Gamma$ of some first-order language $\mathcal{L}(\Sigma))$. 
+  \\ Answer 
+  \begin{enumerate}
+      \item $\Gamma $ is the set of formulas, PQR is formula. We need to show in 3 cases. holds from left to right and right to left
+      \item left to right: if
+       $\Gamma, P, Q \Vdash R $ then, $\Gamma, P \wedge Q \Vdash R $
+      \item 2 parts, $\Gamma and P, Q$. Let A proves $P \vdash R$, B proves $Q \vdash R$ and we want to show that $A \wedge B \vdash R$
+      \item This step is trivial by the definition of $\vdash, \wedge Intro$
+      \item Now, we want to show that $\Gamma \vdash R$
+      \item By definition of $\vdash$, you can add any premises, as long as it is in the first order language $\mathcal{L}(\Sigma)$ although it would Weakening the proof. 
+      \item $\Gamma$ is therefore legally added but it weakens the proof. 
+      \item Thus, the proof is made.
+      \item right to left:
+      \item Similar to left to right, but instead we use $\wedge Elim$
+      \item the reverse of the weakening is the still the weakening itself. 
+  \end{enumerate}
+  \item (30\%) Show that the following three conditions on a set of formulae
+\end{enumerate} 
+  $\Gamma$ are equivalent:\\
+a. $\Gamma \vdash P$ and $\Gamma \vdash \neg P$ for some $P$\\
+\begin{enumerate}
+  \item With the premises of $\Gamma $, we can deduce that either not P or P. 
+  \item This implies that $\Gamma \vdash Q$ for every formula $Q$\\
+  \item Since, $\Gamma$ is the set of all formulas, it is obvious that it contains the formula P and formula not P. 
+\end{enumerate} 
+b. $\Gamma \vdash Q$ for every formula $Q$\\
+\begin{enumerate}
+  \item This implies that $\Gamma \vdash \neg \forall x(x=x)$
+  \item a formula can be broken down to terms and arrangement of terms(symbols, predicates, quantifer).
+  \item For every formula Q, Q can be broken to variables such as x, symbols suchas  "=", and quantifer such as "for all".  
+  \item Thus, $\Gamma \vdash Q$ for every formula $Q$
+\end{enumerate}
+c. $\Gamma \vdash \neg \forall x(x=x)$
+\begin{enumerate}
+  \item This implies a. $\Gamma \vdash P$ and $\Gamma \vdash \neg P$ for some $P$\\
+  \item This says that not every formula is identical with the premises that $\Gamma $. 
+  \item The case of the substitution instance which is used to achieve capture-free substituion fits into the case of x is not equal x.
+  \item Thus, it implies (a) 
+\end{enumerate}
+[Hint: show that (a) implies (b), (b) implies (c), and (c) implies (a)]
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item (10\%) Show that for any terms $t_{1}, t_{2}, t_{3}$ and variable $v$ :\\
+a. $t_{1}=t_{2}, t_{2}=t_{3} \vdash t_{1}=t_{3}$\\
+b. $t_{1}=t_{2} \vdash t_{2}=t_{1}$\\
+c. $t_{1}=t_{2} \vdash t_{3}\left[t_{1} / v\right]=t_{3}\left[t_{2} / v\right]$
+
+  \item (10\%) Show that $\forall v P \dashv \vdash \neg \exists \neg P$ for every formula $P$.
+
+\end{enumerate}
+EXTRA CREDIT $10 \%$ for any of the following:
+
+\begin{enumerate}
+  \item Show that for every formula $P$ of $\mathcal{L}(\varnothing)$ (the first-order language with no non-logical constants at all $)$, either $\forall x \forall y(x=y) \vdash P$ or $\forall x \forall y(x=y) \vdash \neg P$.
+\end{enumerate}
+[Hint: this will require an induction on the construction of the formula $P$.]
+
+\begin{enumerate}
+  \setcounter{enumi}{2}
+  \item Suppose $F$ is a singulary predicate of $\Sigma$. Define a function $r_{F}: \mathcal{L}(\Sigma) \rightarrow \mathcal{L}(\Sigma)$ as follows:
+\end{enumerate}
+$$
+\begin{aligned}
+r_{F} P &=P \quad \text { when } P \text { is atomic } \\
+r_{F}(\neg P) &=\neg r_{F} P \\
+r_{F}(P \rightarrow Q) &=r_{F} P \rightarrow r_{F} Q \\
+r_{F}(P \wedge Q) &=r_{F} P \wedge r_{F} Q \\
+r_{F}(P \vee Q) &=r_{F} P \vee r_{F} Q \\
+r_{F}(\forall v P) &=\forall v\left(F v \rightarrow r_{F} P\right) \\
+r_{F}(\exists v P) &=\exists v\left(F v \wedge r_{F} P\right)
+\end{aligned}
+$$
+Show that $r_{F}[\Gamma], F\left(v_{1}\right), \ldots, F\left(v_{n}\right) \vdash r_{F} P$ whenever $\Gamma \vdash P$, where $v_{1}, \ldots, v_{n}$ are the free variables in $\Gamma$ and $P$. [Hint: This will require an induction on provable sequents. It'll be enough to do the]
+\begin{enumerate}
+  \setcounter{enumi}{3}
+  \item Show, using the result of problem 4 above, that $\Gamma \vdash P, f[\Gamma] \vdash \rightarrow, v, \wedge, \neg, \exists,=f P$, where $f: \mathcal{L}(\Sigma) \rightarrow \mathcal{L}_{\rightarrow, \vee, \wedge, \neg, \exists,=}(\Sigma)$ is defined as follows:
+\end{enumerate}
+$$
+\begin{aligned}
+f P &=P \quad \text { when } P \text { is atomic } \\
+f(\neg P) &=\neg f P \\
+f(P \rightarrow Q) &=f P \rightarrow f Q \\
+f(P \wedge Q) &=f P \wedge f Q \\
+f(P \vee Q) &=f P \vee f Q \\
+f(\forall v P) &=\neg \exists \neg v f P \\
+f(\exists v P) &=\exists v(c P)
+\end{aligned}
+$$
+[Hint: This will require an induction on provable sequents. It'll be enough to do the steps for Assumption, Weakening, $\forall I n t r o, \forall$ Elim, and one or two other rules.]
+
+
+\end{document}

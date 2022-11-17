@@ -1,0 +1,15 @@
+\Gamma -> formulas, \P -> formulas 
+\Vdash -> derives 
+order pairs 
+
+single turnstiles, 
+entails, proves 
+
+relation between formulas and formula 
+
+形式上的正确
+意义上的联通
+证明本质上是画画
+
+fitch 
+assert a smaller atomic 

@@ -1,4 +1,4 @@
-base case : 0 is not a, von 
+ : 0 is not a, von 
 
 
 quantification theory 
@@ -7,3 +7,43 @@ even the identity law does not work
 is there a case that even 
 a is not b cannot be used?
 paraconsistent logic ?
+
+-----
+for all a in A, a in B, 
+a in A u B, 
+
+onto at least
+injective 1to1 at most   
+
+bloomberg model
+
+3:21 part 2, countability 
+dig-command 
+
+---------------
+
+variant assignmen
+not a function but a relation 
+
+cut
+
+what is a ordered pair 
+instance of assumption
+a sequent 
+a sequent is also also an ordered pair 
+so, is an ordered pair an instances of assumption?
+于是和所以的区别是什么？
+
+what's the purpose of the reading
+not just for fun, for facts 
+
+
+
+
+
+
+
+
+
+
+
