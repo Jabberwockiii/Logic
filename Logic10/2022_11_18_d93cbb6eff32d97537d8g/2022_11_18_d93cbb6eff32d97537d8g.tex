@@ -1,0 +1,161 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\title{Problem Set 10 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+Advanced Logic
+
+15th November 2022
+
+Due date: Friday, 18 November.
+
+\begin{enumerate}
+  \item (50\%) Show that the following are definable in the standard string structure.
+\end{enumerate}
+
+(a) \((10 \%)\) the set of all strings whose length is an even number.
+\begin{enumerate}
+  \item convert the question to the weaker version the set of all strings whose length is a natural number and it is definable.  
+  \item This step is trivial because there is only countable many formulas in the language, thus it can be mapped to natural number with a bijection
+  \item Now, we need to show that the even number case is definable. 
+  \item Since to make a predicate definable in a signature we need to show that for all variables the function takes in can be mapped to a certain formula in the signature.
+  \item P is y = x + x 
+  \item Base case, y = 0 + 0
+  \item IH : y = x+1 + x+1 
+  \item y = x+x + 2  = 2x+2
+  \item x can be treated as a domain of the function that maps any string to the length of it.
+  \item P = $\forall x( Even(len(A))) \leftrightarrow \exists y( x = y + y) $
+\end{enumerate}
+(b) \((10 \%)\) the function that maps every ordered pair of strings \(\langle s, t\rangle\) to its first element.
+\begin{enumerate}
+  \item $F(v_1, v_2) = v_1$ 
+  \item $F \rightarrow P$
+  \item P = ($\forall y \exists x $ if y = 1, then x = 0, if y = 0, then x = 0)
+\end{enumerate}
+(c) \((10 \%)\) the set of all ordered pairs of strings \(\langle s, t\rangle\) such that \(s\) is a length-one substring of \(t\)
+  \begin{enumerate}
+    \item $t = a \oplus s$
+    \item F: $F(\langle s, t\rangle) = \langle s, a \oplus s\rangle$
+    \item $F \rightarrow P$
+    \item P : $\forall t \exists a \exists x (string(t) \land t = a \oplus s \land len(s) = 1 \land len(a) = len(t) - len(a))$
+  \end{enumerate}
+(d) \((10 \%)\) the function that maps each string to an equally long string comprised entirely of spaces.
+\begin{enumerate}
+  \item F : $F(len(s)) = v_1, v_2, ... v_n$, $v_{n}$ v is the space that contains all the setences, len(v) = len(s) 
+  \item F $\rightarrow$ P 
+  \item P : $\forall x, \exists v_n (len(v) = len(s) \land n = extension(s))$
+\end{enumerate}
+(e) \((10 \%)\) the relation that holds between two strings s and \(t\) when \(s\) is a line of \(t\)--i.e., \(s\) would appear as a line if we pasted \(t\) into a text editor. That is: \(s\) doesn't contain any newlines, and either \(s\) is \(t\), or \(s\) is an initial substring of \(t\) that's followed by a newline, or \(s\) is a final substring of \(t\) that's preceded by a newline, or \(s\) is a substring of \(t\) that's both preceded and followed by a newline.
+\begin{enumerate}
+  \item 4 cases:  
+  \item define: newline() as a function that string for the new line symbol
+
+\end{enumerate}
+Reminder: The way to show that a set/relation is definable in a structure is to find a formula \(P\) such that when when the structure is expanded with a definition
+
+\[
+\forall v_{1} \ldots \forall v_{n}\left(\text { YourNewPredicate }\left(v_{1}, \ldots, v_{n}\right) \leftrightarrow P\right)
+\]
+
+the extension of YourNewPredicate will be the desired set/relation. For functions, you can instead consider definitions of the form
+
+\[
+\forall v_{1} \ldots \forall v_{n+1}\left(v_{n+1}=\operatorname{YourNewFunctionSymbol}\left(v_{1}, \ldots, v_{n}\right) \leftrightarrow P\right)
+\]
+
+You can built up your definitions in stages.
+
+For this exercise, it is enough if you just write down definitions that work-o-I won't expect you to give the proof that they work (which will always just be a routine exercise in unpacking the definition of truth in a structure).
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item (25\%) Suppose set \(X\) and binary relations \(R\) and \(R^{\prime}\) are definable in a certain structure \(S\) with domain \(D_{S}\). Show that the following are also definable:\\
+(a) \((5 \%) D_{S} \backslash X\)\\
+\begin{enumerate}
+  \item S is domain, interpretation of strings and terms. Thus, X is the combination of terms and strings after the assignment function processing ie. capture free variables. 
+  \item $D_{S} \backslash$ X means that F
+  \item F : $F(d) = d - X$
+  \item F $\rightarrow $ P 
+  \item P = $\forall S \exists D, \exists X (X \vee D_{S} \backslash X)$ 
+\end{enumerate} 
+(b) \((5 \%) R^{-1}\)\\
+  \begin{enumerate}
+    \item converse of the relation
+    \item assume we have r = (a,b)
+    \item  $R^{-1}$ is just (b,a)
+    \item F: F((a,b))
+    \item P: $\forall a, \forall b, (a,b) \vee F(a,b) = (b,a)$
+  \end{enumerate}
+(c) \((5 \%) R \cup R^{\prime}\)\\
+  \begin{enumerate}
+    \item R' is the relation after a transformation ie. mapping
+    \item assume that we have a F, F(R) = R'
+    \item P: $\forall R, \exists R', R \cup R'$
+    \item literal meaning, extension of R
+  \end{enumerate}
+(d) \((5 \%) R \circ R^{\prime}\)\\
+\begin{enumerate}
+  \item R' is the domain of R after a transformation
+  \item F : R (R'), R takes in the result of R' and get some result
+  \item P : $\forall R, \exists R', exists D. D = R'(X), D \cup R(D)  $
+\end{enumerate}
+(e) \((5 \%)\{d \mid R d d\}\) 3. (25\%) Here is a list of expressions in the language of strings, specified using various shorthands that have been introduced. For each one, say
+\end{enumerate}
+(i) what string it is (write out in full, with no shorthands like omitting parentheses or infix notation)
+
+(ii) whether it is a term or a formula
+
+(iii) what its free variables are (if any)
+
+(iv) if it's a term, what it denotes in the standard string structure on an assignment function that maps the variable \(x\) to the string cat.
+
+(v) if it's a formula, whether it is true in the standard string structure on an assignment function that maps the variable \(x\) to the string cat.
+
+(vi) if it's a formula: whether it is valid, inconsistent, or neither.\\
+(a) ""\\
+(b) \(x=" x^{\prime \prime}\)\\
+(c) \(x \oplus " " \oplus x\)\\
+(d) " \(x " \leq " " \oplus x\)\\
+(e) \(\exists x\left(x=" x^{\prime \prime}\right)\)\\
+(f) \(\forall x(x \leq " " \rightarrow x=" ")\)\\
+(g) \(\left(x=" x^{\prime \prime}\right)[" x " / x]\)\\
+(h) \(\forall x(x=" x ")[" x " / x]\)\\
+(i) \(\langle x\rangle\)\\
+(j) \(\langle x\rangle=" x "\)\\
+(k) \(\left\langle x=" x^{"}\right\rangle\)\\
+(1) \(\langle\langle x\rangle\rangle\)
+
+EXTRA CREDIT: up to \(10 \%\) for any of the following.
+
+\begin{enumerate}
+  \item Suppose that structure \(S\) is explicit: that is, for every element of the domain, there is a term with no free variables that denotes it in \(S\). Show that every finite subset of \(S\) 's is definable in \(S\).
+\end{enumerate}
+
+Reminder: given the definition definition of "finite subset", you can show that all finite subsets of a set have a certain property by showing that the empty set has the property and that if a set has it, so does any set derived from that set by adding one extra element.
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item Using the compactness theorem, prove that if a set of sentences (in any signature) is true in arbitrarily large finite structures, it is also true in some infinite structure. Hint: You can help yourself to the fact that for each \(n\), there is a sentence \(I_{n}\) that is true exactly in thos structures whose domain has size at least \(n\)--e.g., \(I_{3}\) is \(\exists x \exists y \exists z(\neg(x=y) \wedge \neg(x=z) \wedge \neg(y=z))\). Any structure in which all these sentences are true must have an infinite domain.
+
+  \item When \(S\) is a nonstandard model of true arithemtic, and \(a\) and \(b\) are two elements of the domain of \(S\), nonstandard model of arithmetic, say that \(a \Gamma_{s} b\) iff \(x\lceil y\) is true in \(S\) on the assignment \([x \mapsto a, y \mapsto b]\). Say that \(a\) and \(b\) are "in the same block" iff for for some number \(n\), either \(x=y+\langle n\rangle\) or \(x=y+\langle n\rangle\) is true in \(S\) on this assignment.
+
+\end{enumerate}
+
+Prove that if \(a\) is a nonstandard element of the domain, then (i) there is a nonstandard element \(b\) such that \(a\left\lceil_{S} b\right.\) and \(b\) is not in the same block as \(a\), and (ii) a nonstandard element \(c\) such that \(c\lceil s, a\) and \(c\) is not in the same block as \(a\).
+
+Hint: you could start by showing that when two numbers are both nonstandard, their sum is not in the same block as either of them; then consider \(a+a\). For part (ii), note that while true arithmetic doesn't imply that every number can be divided evenly by two, it does imply that whenever a number can't be divided evenly by two, its successor can.
+
+
+\end{document}
