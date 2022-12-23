@@ -1,7 +1,8 @@
 a = {
     "set builder notation professor version"
     : 
-    "the subset of A (such that) for all elements x in set A,"
+    "the subset of A (such tha]
+    t)for all elements x in set A,"
     "x is a memeber of the [set builder notation],"
     "(if and only if), the subset of A that contains ALL and ONLY those objects x (for which) [condition A] x [condition B]"
 }

@@ -1,0 +1,76 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+
+\title{Problem Set 10 }
+
+\author{}
+\date{}
+
+
+\begin{document}
+\maketitle
+Advanced Logic
+
+27 th November 2022
+
+Due date: Friday, 2 December.
+
+Note: the scores for these problems add up to \(110 \%\), so a perfect score corresponds to \(10 \%\) extra credit.
+
+\begin{enumerate}
+  \item Let \(M\) be the theory in the language of strings axiomatized by all of the following sentences (where \(c\) may be any constant of the language of strings other than "")
+\end{enumerate}
+
+\[
+\begin{array}{ll}
+\text { M1 } & \forall x(x=" " \oplus x) \\
+\text { M2 } & \forall x(x=x \oplus " \prime) \\
+\text { M3 } & \forall x \forall y \forall z((x \oplus y) \oplus z=x \oplus(y \oplus z))
+\end{array}
+\]
+
+Show the following:
+
+(a) \((20 \%)\) Show that for any length-one string \(a\), if \(c\) is the constant that denotes \(a\) in the standard string structure \(\mathbb{S}\), then \(c=\langle a\rangle\) is a theorem of \(\mathbf{M}\).
+
+(b) (30\%) Show that for any strings \(s_{1}\) and \(s_{2},\left\langle s_{1}\right\rangle \oplus\left\langle s_{2}\right\rangle=\left\langle s_{1} \oplus s_{2}\right\rangle\) is a theorem of M.
+
+Hint: use induction on \(s_{1}\).
+
+(c) \((30 \%)\) Using what you showed in parts (a) and (b), prove that for any closed term \(t\) in the language of strings, \(t=\left\langle\llbracket t \rrbracket_{S}\right\rangle\) is a theorem of \(M\).
+
+Reminder: \(\llbracket t \rrbracket_{\mathbb{S}}\) is the denotation of \(t\) in the standard string structure.
+
+Hint: use induction on the construction of \(t\).
+
+(d) \((15 \%)\) Let \(t_{1}\) and \(t_{2}\) be any closed terms in the language of strings. Using what you showed in (c), prove that if the sentence \(t_{1}=t_{2}\) is true in \(\mathbb{S}\), then it is a theorem of \(M\).
+
+\begin{enumerate}
+  \setcounter{enumi}{1}
+  \item Let \(M+\) be the result of adding to \(M\) :, for any two constants \(c\) and \(c^{\prime}\) of the language of strings other than "", each of the following axioms:
+\end{enumerate}
+
+\[
+\begin{array}{ll}
+\text { M4 } & \forall x\left(c \oplus x \neq "^{\prime \prime}\right) \\
+\text { M5 } & \forall x \forall y(c \oplus x=c \oplus y \rightarrow x=y) \\
+\text { M6 } & \forall x\left(c \oplus x \neq c^{\prime} \oplus x\right)
+\end{array}
+\]
+
+(a) (5\%) Show that for any two distinct strings \(s\) and \(t,\langle s\rangle \neq\langle t\rangle\) is a theorem of \(\mathrm{M}+\mathrm{s}\) Hint: use induction on \(t\).
+
+(b) (5\%) Using what you showed in part (a) and in part (c) of the previous exercise, conclude that for any closed terms \(t_{1}\) and \(t_{2}\) of the language of strings, if \(t_{1} \neq t_{2}\) is true in \(\mathbb{S}\), it is a theorem of \(M+\).
+
+(c) (5\%) Using what you showed in part (b) of this exercise and part (d) of the previous exercise, conclude that if \(P\) is any sentence of the language of strings that does not include any quantifiers or the predicate \(\leq\) and is true in \(\mathbb{S}, P\) is a theorem of \(\mathrm{M}+\).
+
+Hint: Use induction on the construction of \(P\), with the induction hypothesis whichever of \(P\) and \(\neg P\) is true in \(\sim\) is a theorem of \(M+\).
+
+
+\end{document}

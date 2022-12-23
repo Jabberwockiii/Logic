@@ -1,0 +1,6 @@
+if r = \in
+a \in {a}
+2 relations: a 
+--
+l3 17
+用诗的方式写集合证明
